@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Atelier</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>atelier</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://use.fontawesome.com/a062eefb4d.js"></script>
+  </head>
 
-<%= yield %>
+  <body>
+   <header class="header">
+     <div class="setting">
+       <i class="fa fa-cog" aria-hidden="true"></i>
+     </div>
+     <div class = 'logo'>
+       <img alt="logo" height=40 src="/assets/atelier.png">
+     </div>
+   </header>
 
-</body>
+    <%= yield %>
+
+    <footer class = "global-navi">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
+    </footer>
+  </body>
 </html>
