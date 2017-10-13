@@ -1,5 +1,8 @@
   <div class="contents row" >
     <% @jobs.each do |job| %>
-      <p><%= job.title %></p>
+      <div class="content_post" style="background-image: url(<%= job.image %>);">
+        <%= simple_format(job.title) %>
+        <span class="username"><%= job.id %></span>
+      </div>
     <% end %>
   </div>
