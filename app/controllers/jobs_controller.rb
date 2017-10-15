@@ -6,6 +6,10 @@ class JobsController < ApplicationController
   def new
   end
 
+  def show
+    @jobs = Job.find(params[:id])
+  end
+
   def create
     Job.create(job_params)
     binding.pry

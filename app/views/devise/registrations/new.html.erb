@@ -4,6 +4,19 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :status %>
+    <%= f.check_box  :status, {multiple: false}, 'user', nil %>個人
+    <%= f.check_box  :status, {multiple: false}, 'organization', nil %>法人・団体
+    <br>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :name %> <em>(30 characters maximum)</em><br />
+    <%= f.text_field :name, autofocus: true, maxlength: "30" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
