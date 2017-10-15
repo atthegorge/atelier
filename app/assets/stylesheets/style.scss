@@ -20,15 +20,16 @@ float: right;
 
 
 
-
-
 .fa-cog:before
 {
 text−color : ffffff;
+font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+padding : 15px 50px 0px 50px ;
 }
 
 i{
-padding : 10px 50px 0px 50px ;
+font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+padding : 15px 50px 0px 50px ;
 color : ffffff;
 }
 
@@ -106,7 +107,8 @@ font-weight: bold;
 }
 
 .serif {
-font-family: 'ほのか明朝',serif;
+font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+font-weight: light;
 }
 
 .ultra {
@@ -496,7 +498,7 @@ height: 150px;
 border-radius: 50%;
 background-position: center center;
 display: inline-block;
-border: 5px solid #008080;
+border: 3.5px solid #008080;
 }
 
 .content_username{
