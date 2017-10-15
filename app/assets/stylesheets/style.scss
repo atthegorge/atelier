@@ -444,8 +444,7 @@ text-align: center;
 *
 */
 
-/*募集個別ページスタイル
-*/
+/* 募集個別ページスタイル */
 
 .job_title{
 font-weight: bolder;
@@ -490,3 +489,28 @@ border-radius: 10px;        /* CSS3草案 */
 -moz-border-radius: 10px;   /* Firefox用 */
 }
 
+/* 募集個別ページスタイル */
+.member_image{
+width: 150px;
+height: 150px;
+border-radius: 50%;
+background-position: center center;
+display: inline-block;
+border: 5px solid #008080;
+}
+
+.content_username{
+font-weight: bold;
+}
+
+.member_status{
+font-size: 60%;
+color: #fff;
+background-color:#D6005B;
+padding: 5px 15px 3px 15px;
+width: 13%;
+text-align: center;
+border-radius: 10px;        /* CSS3草案 */
+-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+-moz-border-radius: 10px;   /* Firefox用 */
+}

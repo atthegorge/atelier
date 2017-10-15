@@ -2,7 +2,6 @@
     <% @jobs.each do |job| %>
       <div class="content_post" style="background-image: url(<%= job.image %>);">
         <%= simple_format(job.title) %>
-        <span class="username"><%= job.id %></span>
       </div>
     <% end %>
     <%= paginate(@jobs) %>

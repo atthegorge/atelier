@@ -12,6 +12,11 @@
   <br>
 
   <div class="field">
+    <%= f.label :image %> <br />
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="field">
     <%= f.label :name %> <em>(30 characters maximum)</em><br />
     <%= f.text_field :name, autofocus: true, maxlength: "30" %>
   </div>

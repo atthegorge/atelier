@@ -1,0 +1,31 @@
+<div class="contents row">
+  <div class="member_info"  style="text-align:center;">
+    <!-- ユーザーアイコン用のイメージをサインイン画面で取得が必要 -->
+    <div class="member_image_area">
+      <!-- <img src="<%= @members.image %>" alt="<%= @members.name %>"> -->
+      <p class="member_image" style=background-image:url("<%= @members.image %>);>
+
+      </p>
+    </div>
+
+    <div class="content_user_main">
+    <span class="member_status" >USER</span>
+    <span class="member_username">    Masato Ushimaru</span>
+    </div>
+    <br>
+    <!-- userは「応募一覧」、orgは「募集一覧」及び「候補者一覧」をJSでタブ表示 -->
+    <div class="index">
+      <p>応募一覧</p>
+    </div>
+  </div>
+  <div class="content_list">
+    <% @jobs.each do |job| %>
+    <div class="content_post" style="background-image: url(<%= job.image %>);">
+      <%= simple_format(job.title) %>
+    </div>
+    <% end %>
+    <%= paginate(@jobs) %>
+  </div>
+
+</div>
+
