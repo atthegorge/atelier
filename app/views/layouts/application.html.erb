@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>atelier</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-    <script src="https://use.fontawesome.com/a062eefb4d.js"></script>
-  </head>
+<head>
+  <title>atelier</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://use.fontawesome.com/a062eefb4d.js"></script>
+</head>
 
-  <body>
-   <header class="header">
+<body>
+ <header class="header">
 <!--      <div class="setting">
        <i class="fa fa-cog" aria-hidden="true"></i>
      </div> -->
@@ -19,18 +19,35 @@
    </header>
 
 
-    <%= yield %>
+   <%= yield %>
 
-<!-- フッター向け余白 -->
-    <br></br>
-    <br></br>
-    <br></br>
+   <!-- フッター向け余白 -->
+   <br></br>
+   <br></br>
+   <br></br>
 
-<!-- グローバルナビ -->
-    <footer class = "global-navi">
-      <i class="fa fa-user-circle" aria-hidden="true"> MYPAGE</i>
-      <i class="fa fa-search" aria-hidden="true" > SEARCH</i>
-      <i class="fa fa-sign-out" aria-hidden="true"> SIGNOUT</i>
-    </footer>
-  </body>
+   <!-- グローバルナビ -->
+   <footer class = "global-navi">
+    <ul class="global_navi_icon">
+      <li class="footer_icon">
+        <a href="https://techacademy.jp/magazine/5712">
+          <i class="fa fa-user-circle" aria-hidden="true">
+
+          </i>
+        </a>
+      </li>
+      <li class="footer_icon">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </li>
+      <!-- userは検索 -->
+      <li class="footer_icon"><i class="fa fa-search" aria-hidden="true" ></i></li>
+      <!-- orgの時は投稿アイコンを表示:if文でなんとかする -->
+      <!-- <li class="footer_icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></li> -->
+      <li class="footer_icon">
+        <%= link_to "link", destroy_member_session_path, method: :delete %>
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </li>
+    </ul>
+  </footer>
+</body>
 </html>

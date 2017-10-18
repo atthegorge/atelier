@@ -6,7 +6,7 @@ font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragin
 margin: 0;
 }
 
-
+/* logo layout */
 
 .logo{
 text-align : center;
@@ -18,20 +18,6 @@ text-align: right;
 float: right;
 }
 
-
-
-.fa-cog:before
-{
-text−color : ffffff;
-font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-padding : 15px 50px 0px 50px ;
-}
-
-i{
-font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-padding : 15px 50px 0px 50px ;
-color : ffffff;
-}
 
 
 
@@ -98,7 +84,7 @@ text-decoration: none;
 color: $dark;
 @extend .transition;
 &:hover {
-color: $accent;
+color: #000;
 }
 }
 
@@ -287,7 +273,7 @@ bottom: 0;
 left: 0;
 right: 0;
 @include filter-gradient(#000000, #a60000, vertical);
-@include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
+@include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.70) 1%));
 z-index: 1;
 border-radius: 3px;
 }
@@ -418,17 +404,11 @@ text-decoration: underline;
 }
 }
 
+/* footer */
+
 footer {
 color: #fff;
 background-color: #777777;
-p {
-text-align: center;
-margin: 0 auto;
-
-}
-i{
-padding: 0px, 20px;
-}
 }
 
 .global-navi{
@@ -437,6 +417,34 @@ position: fixed;
 bottom: 0;
 width : 100%;
 text-align: center;
+ul{
+list-style-type: none;
+padding-left: 0;
+}
+li{
+  float:center;
+}
+.global_navi_icon{
+margin: auto;
+overflow: hidden;
+text-align: center;
+background-color: #333
+}
+.global_navi_icon li{
+float: left;
+text-align: center;
+}
+.footer_icon{
+width: 25%;
+height: 100%;
+padding: 0px, 20px;
+}
+.footer_icon:hover {
+  background-color: #008080;
+}
+.fa{
+  padding: 15px 50px 10px 50px;
+}
 }
 
 /*
