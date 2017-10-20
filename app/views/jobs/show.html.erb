@@ -13,25 +13,22 @@
   <br>
   <div class="job_introduction">
     <h3 class="index_label">概要</h3>
-    <p class="job_content_detail">国内大都市圏の低所得地域において、困難を抱える子どもを対象とした
-      学習支援活動を展開しています。正規職員10名にボランティアの5名を
-      加えた、小規模なチームで活動をしています。</p>
+    <p class="job_content_detail">
+      <%= @jobs.introduction %>
+    </p>
     </div>
     <br>
     <div class="job_description">
       <h3 class="index_label">仕事説明</h3>
-      <p class="job_content_detail">今後組織と活動領域を拡大していく上で、支援者との関係性構築が非常に
-        重要な課題となっています。寄付金を収めていただける支援者を増やすための
-        インターネットを活用したマーケティング戦略立案を目的としたミーティング
-        （所要１時間程度）への参加をお願いしたいと考えています。</p>
+      <p class="job_content_detail">
+        <%= @jobs.description %>
+      </p>
       </div>
       <br>
       <div class="job_required_skill">
         <h3 class="index_label">望ましいスキル</h3>
         <p class="job_content_detail">
-          ・webマーケティングの実務経験 <br>
-          ・顧客リレーション構築に関する業務経験 <br>
-          ・企業での広報業務の経験 <br>
+          <%= @jobs.skill %>
         </p>
       </div>
 
