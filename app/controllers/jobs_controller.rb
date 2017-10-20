@@ -11,8 +11,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(job_params)
-    binding.pry
+    Job.create(title: job_params[:title], introduction: job_params[:introduction], description: job_params[:description], skill: job_params[:skill], user_id: current_user.id)
   end
 
   private
