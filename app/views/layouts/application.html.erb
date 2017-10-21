@@ -31,26 +31,30 @@
    <!-- グローバルナビ -->
    <footer class = "global-navi">
     <ul class="global_navi_icon">
+    <% if member_signed_in? %>
       <li class="footer_icon">
-          <%= link_to root_path do %>
-            <i class="fa fa-user" aria-hidden="true"></i>
-          <% end %>
-    </li>
-    <li class="footer_icon">
-      <%= link_to "setting", destroy_member_session_path, method: :delete %>
-    </li>
-    <!-- userは検索 -->
-    <li class="footer_icon">
-      <%= link_to "search", destroy_member_session_path, method: :delete %>
-    </li>
-    <!-- orgの時は投稿アイコンを表示:if文でなんとかする -->
-    <!-- <li class="footer_icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></li> -->
-    <li class="footer_icon">
-      <%= link_to "logout", destroy_member_session_path, method: :delete %>
-    </li>
-  </ul>
-
-
-</footer>
+        <%= link_to members_path(current_member) do %>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <% end %>
+      </li>
+      <% else %>
+      <li class="footer_icon">
+        <%= link_to "/members/sign_in" do %>
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        <% end %>
+      </li>
+      <% end %>
+      <li class="footer_icon">
+        <%= link_to destroy_member_session_path, method: :delete do %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <% end %>
+      </li>
+      <li class="footer_icon">
+        <%= link_to destroy_member_session_path, method: :delete do%>
+        <i class="fa fa-cog" aria-hidden="true"></i>
+        <% end %>
+      </li>
+    </ul>
+  </footer>
 </body>
 </html>

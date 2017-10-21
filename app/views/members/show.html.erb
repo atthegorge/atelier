@@ -9,8 +9,8 @@
     </div>
 
     <div class="content_user_main">
-      <span class="member_status" >USER</span>
-      <span class="member_username">    Masato Ushimaru</span>
+      <span class="member_username">    <%= @members.name %></span><br>
+      <span class="member_status" ><%= @members.status %></span>
     </div>
     <br>
     <!-- userは「応募一覧」、orgは「募集一覧」及び「候補者一覧」をJSでタブ表示 -->
@@ -25,6 +25,12 @@
     </div>
     <% end %>
     <%= paginate(@jobs) %>
+  </div>
+
+  <div class="main_button">
+    <%= link_to destroy_member_session_path, method: :delete do %>
+    <p class="main_button_signout">SIGN OUT</p>
+    <% end %>
   </div>
 
 </div>
