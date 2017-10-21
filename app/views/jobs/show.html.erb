@@ -16,29 +16,40 @@
     <p class="job_content_detail">
       <%= @jobs.introduction %>
     </p>
-    </div>
-    <br>
-    <div class="job_description">
-      <h3 class="index_label">仕事説明</h3>
-      <p class="job_content_detail">
-        <%= @jobs.description %>
-      </p>
-      </div>
-      <br>
-      <div class="job_required_skill">
-        <h3 class="index_label">望ましいスキル</h3>
-        <p class="job_content_detail">
-          <%= simple_format(@jobs.skill) %>
-        </p>
-      </div>
+  </div>
+  <br>
+  <div class="job_description">
+    <h3 class="index_label">仕事説明</h3>
+    <p class="job_content_detail">
+      <%= @jobs.description %>
+    </p>
+  </div>
+  <br>
+  <div class="job_required_skill">
+    <h3 class="index_label">望ましいスキル</h3>
+    <p class="job_content_detail">
+      <%= simple_format(@jobs.skill) %>
+    </p>
+  </div>
 
-      <!-- userはENTRY、orgはEDIT&DELETE, if文で -->
-      <!-- user向け -->
-      <div class="main_button">
-        <p class="main_button_entry">ENTRY</p>
-      </div>
+  <!-- userはENTRY、orgはEDIT&DELETE, if文で -->
+  <!-- user向け -->
+  <div class="main_button">
+    <p class="main_button_entry">ENTRY</p>
+  </div>
 
-      <!-- org向け -->
+  <div class="main_button">
+    <%= link_to "/jobs/#{@jobs.id}/edit", method: :get do %>
+    <p class="main_button_entry">EDIT</p>
+    <% end %>
+  </div>
+
+  <div class="main_button">
+    <%= link_to "/jobs/#{@jobs.id}", method: :delete do %>
+    <p class="main_button_entry">DELETE</p>
+    <% end %>
+  </div>
+  <!-- org向け -->
 <!--       <div class="main_button">
         <p class="main_button_edit">EDIT</p>
       </div>

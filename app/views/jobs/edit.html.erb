@@ -1,0 +1,13 @@
+  <div class="contents row">
+    <%= form_tag("/jobs/#{@job.id}", method: :patch ) do %>
+    <h3>
+      募集を編集する
+    </h3>
+    <input placeholder="Image Url" type="text" name="image" value="<%= @job.image %>" autofocus="true">
+    <input placeholder="Title" type="string" name="title" value="<%= @job.title %>" autofocus="true">
+    <input placeholder="Introduction" type="text" name="introduction" value="<%= @job.introduction %>" autofocus="true">
+    <input placeholder="Description" type="text" name="description" value="<%= @job.description %>" autofocus="true">
+    <input placeholder="Skill" type="text" name="skill" value="<%= @job.skill %>" autofocus="true">
+    <input type="submit" value="UPDATE">
+    <% end %>
+  </div>
