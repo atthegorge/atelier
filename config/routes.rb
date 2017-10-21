@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post  'jobs'      =>   'jobs#create'
   get   'jobs/:id'  =>   'jobs#show'
   get   'members/:id', to: 'members#show',as: 'members'
+  delete  'jobs/:id'  => 'jobs#destroy'
 end

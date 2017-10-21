@@ -14,11 +14,13 @@
        <i class="fa fa-cog" aria-hidden="true"></i>
      </div> -->
      <a href="/">
-       <p class = 'logo'>
-         <img alt="logo"  src="/assets/atelier.png">
+       <p class = 'logo_area'>
+         <img alt="logo"  src="/assets/atelier.png" class="logo_img">
        </p>
      </a>
    </header>
+   <br></br>
+   <br></br>
 
 
    <%= yield %>
@@ -31,7 +33,7 @@
    <!-- グローバルナビ -->
    <footer class = "global-navi">
     <ul class="global_navi_icon">
-    <% if member_signed_in? %>
+      <% if member_signed_in? %>
       <li class="footer_icon">
         <%= link_to members_path(current_member) do %>
         <i class="fa fa-user" aria-hidden="true"></i>
@@ -40,18 +42,18 @@
       <% else %>
       <li class="footer_icon">
         <%= link_to "/members/sign_in" do %>
-        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        <i class="fa fa-sign-in fa-3x" aria-hidden="true"></i>
         <% end %>
       </li>
       <% end %>
       <li class="footer_icon">
         <%= link_to destroy_member_session_path, method: :delete do %>
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i class="fa fa-search fa-3x" aria-hidden="true"></i>
         <% end %>
       </li>
       <li class="footer_icon">
         <%= link_to destroy_member_session_path, method: :delete do%>
-        <i class="fa fa-cog" aria-hidden="true"></i>
+        <i class="fa fa-cog fa-3x" aria-hidden="true"></i>
         <% end %>
       </li>
     </ul>

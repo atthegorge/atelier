@@ -8,14 +8,12 @@ margin: 0;
 
 /* logo layout */
 
-.logo{
+.logo_area{
 text-align : center;
-padding: 0;
-margin: 0;
+.logo_img{
+height: 30%;
+width: 30%;
 }
-.setting{
-text-align: right;
-float: right;
 }
 
 
@@ -81,7 +79,7 @@ margin: 0;
 
 a {
 text-decoration: none;
-color: #fff;
+color: #777;
 @extend .transition;
 &:hover {
 color: #000;
@@ -147,7 +145,7 @@ background-color : #008080;
 position : fixed;
 top: 0;
 width : 100%;
-height : 65px;
+height : 140px;
 padding-top : 0px;
 }
 
@@ -411,7 +409,7 @@ background-color: #333;
 }
 
 .global-navi{
-height:48px;
+height:150px;
 position: fixed;
 bottom: 0;
 width : 100%;
@@ -422,9 +420,9 @@ list-style-type: none;
 padding-left: 0;
 }
 li{
-  float:center;
-  padding-top: 12px;
-padding-bottom: 12px;
+float:center;
+padding-top: 50px;
+padding-bottom: 50px;
 }
 .global_navi_icon{
 margin: auto;
@@ -448,7 +446,7 @@ border-bottom:none  0px #fff;
 border-left  :solid  0.3px #008080;
 }
 .footer_icon:hover {
-  background-color: #008080;
+background-color: #008080;
 }
 }
 
