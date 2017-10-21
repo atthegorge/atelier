@@ -32,8 +32,9 @@
    <footer class = "global-navi">
     <ul class="global_navi_icon">
       <li class="footer_icon">
-        <%= link_to "mypage", jobs_new_path, method: :get %>
-      </a>
+          <%= link_to root_path do %>
+            <i class="fa fa-user" aria-hidden="true"></i>
+          <% end %>
     </li>
     <li class="footer_icon">
       <%= link_to "setting", destroy_member_session_path, method: :delete %>

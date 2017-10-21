@@ -241,7 +241,6 @@ position: absolute;
 border: 0;
 left: 0;
 right: 0;
-z-index: 50;
 }
 }
 div.contents.row {
@@ -408,7 +407,7 @@ text-decoration: underline;
 
 footer {
 color: #fff;
-background-color: #777777;
+background-color: #333;
 }
 
 .global-navi{
@@ -417,22 +416,27 @@ position: fixed;
 bottom: 0;
 width : 100%;
 text-align: center;
+z-index: 3;
 ul{
 list-style-type: none;
 padding-left: 0;
 }
 li{
   float:center;
+  padding-top: 12px;
+padding-bottom: 12px;
 }
 .global_navi_icon{
 margin: auto;
 overflow: hidden;
 text-align: center;
 background-color: #333
+
 }
 .global_navi_icon li{
 float: left;
 text-align: center;
+
 }
 .footer_icon{
 width: 25%;

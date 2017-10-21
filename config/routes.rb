@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get   'jobs/new'  =>   'jobs#new'
   post  'jobs'      =>   'jobs#create'
   get   'jobs/:id'  =>   'jobs#show'
-  get   'members/:id' => 'members#show'
+  get   'members/:id', to: 'members#show',as: 'members'
 end

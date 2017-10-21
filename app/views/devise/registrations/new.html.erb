@@ -5,8 +5,8 @@
 
   <div class="field">
     <%= f.label :status %>
-    <%= f.check_box  :status, {multiple: false}, 'user', nil %>個人
-    <%= f.check_box  :status, {multiple: false}, 'organization', nil %>法人・団体
+    <label><%= f.radio_button  :status, :user %>個人</label>
+    <%= f.radio_button  :status, :organization %>法人・団体
     <br>
   </div>
   <br>
