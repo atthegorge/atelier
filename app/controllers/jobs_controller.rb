@@ -13,7 +13,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(title: job_params[:title], introduction: job_params[:introduction], description: job_params[:description], skill: job_params[:skill], member_id: current_member.id)
+    Job.create(image: job_params[:image], title: job_params[:title], introduction: job_params[:introduction], description: job_params[:description], skill: job_params[:skill], member_id: current_member.id)
     redirect_to controller: :jobs, action: :index
   end
 
@@ -38,7 +38,7 @@ class JobsController < ApplicationController
 
   private
   def job_params
-    params.permit(:title, :introduction, :description, :skill, :skill_list, :option_list)
+    params.permit(:image, :title, :introduction, :description, :skill, :skill_list, :option_list)
   end
 
 end

@@ -1,7 +1,7 @@
 h1,h2,h3,h4,h5,h6,body {
 line-height: 1.57;
 letter-spacing: 0.15em;
-font-size: 16px;
+font-size: 20px;
 font-family:"游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
 margin: 0;
 }
@@ -71,7 +71,7 @@ padding-top: 60px;
 h1,h2,h3,h4,h5,h6,body {
 line-height: 1.57;
 letter-spacing: 0.15em;
-font-size: 16px;
+font-size: 30px;
 color: $dark;
 font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
 margin: 0;
@@ -257,7 +257,7 @@ font-family: "游ゴシック", "YuGothic";
 div.content_post {
 @include boxBase(20px 0 ,30px);
 position: relative;
-height: 250px;
+height: 400px;
 color: #fff;
 background-size: cover;
 background-position: center center;
@@ -321,7 +321,6 @@ left: 30px;
 right: 100px;
 bottom: 30px;
 margin: 0;
-font-size: 20px;
 z-index: 2;
 text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
 }
@@ -378,7 +377,6 @@ background-color: $accent;
 border-radius: 20px;
 color: #fff;
 border: 0;
-font-size: 18px;
 &:hover {
 background-color: lighten($accent, 10%);
 }
@@ -488,7 +486,7 @@ font-size: 72%;
 color: #fff;
 background-color: #008080;
 padding: 5px 15px 5px 15px;
-width: 20%;
+width: 30%;
 
 border-radius: 10px;        /* CSS3草案 */
 -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
@@ -532,8 +530,8 @@ border-radius: 10px;        /* CSS3草案 */
 
 /* 募集個別ページスタイル */
 .member_image{
-width: 150px;
-height: 150px;
+width: 180px;
+height: 180px;
 border-radius: 50%;
 background-position: center center;
 display: inline-block;
@@ -545,7 +543,7 @@ font-weight: bold;
 }
 
 .member_status{
-font-size: 60%;
+font-size: 78%;
 color: #fff;
 background-color:#D6005B;
 padding: 5px 15px 3px 15px;
@@ -554,4 +552,11 @@ text-align: center;
 border-radius: 10px;        /* CSS3草案 */
 -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
 -moz-border-radius: 10px;   /* Firefox用 */
+}
+
+.action_signup{
+border-color: #777;
+border-radius: 20px;
+border: 0;
+text-align: center;
 }
