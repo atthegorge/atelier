@@ -15,7 +15,11 @@
     <br>
     <!-- userは「応募一覧」、orgは「募集一覧」及び「候補者一覧」をJSでタブ表示 -->
     <div class="index">
+      <% if current_member.status == "user" %>
       <p>応募一覧</p>
+      <% else %>
+      <p>募集一覧</p>
+      <% end %>
     </div>
   </div>
   <div class="content_list">

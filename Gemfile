@@ -52,3 +52,10 @@ gem 'sprockets', '2.11.0'
 gem 'kaminari'
 
 gem 'devise'
+
+group :production do
+  gem 'rails_12factor'
+end
+
+# タグ機能の追加
+gem 'acts-as-taggable-on', '~> 4.0'

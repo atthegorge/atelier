@@ -7,11 +7,13 @@
     <p><%= @jobs.title %></p>
   </span>
   <span class="job_org_name">
-<!--   団体名を表示したい -->
-    <p><span style="color: #008080">● </span><%= @jobs.member.name %></p>
+    <!--   団体名を表示したい -->
+    <p><span style="color: #008080">● </span><%= link_to "#{@jobs.member.name}", "/members/#{@jobs.member.id}" %></p>
     <!-- 団体名からページに飛ばしたい -->
   </span>
   <br>
+
+
   <div class="job_introduction">
     <h3 class="index_label">概要</h3>
     <p class="job_content_detail">
@@ -39,14 +41,14 @@
     <p class="main_button_entry">ENTRY</p>
   </div>
 
-<% if member_signed_in? && current_member.id == @jobs.member_id %>
+  <% if member_signed_in? && current_member.id == @jobs.member_id %>
   <div class="main_button">
     <%= link_to "/jobs/#{@jobs.id}/edit", method: :get do %>
     <p class="main_button_entry">EDIT</p>
     <% end %>
   </div>
   <div class="main_button">
-    <%= link_to "/jobs/#{@jobs.id}", method: :delete do %>
+    <%= link_to "/jobs/#{@jobs.id}", method: :delete, data: { confirm: 'Are you sure?' } do  %>
     <p class="main_button_entry">DELETE</p>
     <% end %>
   </div>
