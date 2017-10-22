@@ -13,7 +13,8 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(title: job_params[:title], introduction: job_params[:introduction], description: job_params[:description], skill: job_params[:skill])
+    Job.create(title: job_params[:title], introduction: job_params[:introduction], description: job_params[:description], skill: job_params[:skill], member_id: current_member.id)
+    redirect_to controller: :jobs, action: :index
   end
 
   def destroy
