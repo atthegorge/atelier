@@ -20,7 +20,7 @@ class JobsController < ApplicationController
   def destroy
     job = Job.find(params[:id])
     # 下記は中間テーブル設計時に有効になる
-    if job.user_id == current_user.id
+    if job.member_id == current_member.id
       job.destroy
     end
   end

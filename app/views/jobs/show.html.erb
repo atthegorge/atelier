@@ -7,7 +7,8 @@
     <p><%= @jobs.title %></p>
   </span>
   <span class="job_org_name">
-    <p><span style="color: #008080">● </span><%= jobs.member.name %></p>
+<!--   団体名を表示したい -->
+    <p><span style="color: #008080">● </span><%= @jobs.member.name %></p>
     <!-- 団体名からページに飛ばしたい -->
   </span>
   <br>
@@ -38,17 +39,18 @@
     <p class="main_button_entry">ENTRY</p>
   </div>
 
+<% if member_signed_in? && current_member.id == @jobs.member_id %>
   <div class="main_button">
     <%= link_to "/jobs/#{@jobs.id}/edit", method: :get do %>
     <p class="main_button_entry">EDIT</p>
     <% end %>
   </div>
-
   <div class="main_button">
     <%= link_to "/jobs/#{@jobs.id}", method: :delete do %>
     <p class="main_button_entry">DELETE</p>
     <% end %>
   </div>
+  <% end %>
   <!-- org向け -->
 <!--       <div class="main_button">
         <p class="main_button_edit">EDIT</p>

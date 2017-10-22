@@ -36,7 +36,7 @@
       <% if member_signed_in? %>
       <li class="footer_icon">
         <%= link_to members_path(current_member) do %>
-        <i class="fa fa-user" aria-hidden="true"></i>
+        <i class="fa fa-user fa-3x" aria-hidden="true"></i>
         <% end %>
       </li>
       <% else %>
@@ -46,11 +46,19 @@
         <% end %>
       </li>
       <% end %>
+<% if member_signed_in? && current_member.status == "user" %>
       <li class="footer_icon">
-        <%= link_to destroy_member_session_path, method: :delete do %>
+        <%= link_to "https://www.google.co.jp/maps" do %>
         <i class="fa fa-search fa-3x" aria-hidden="true"></i>
         <% end %>
       </li>
+<% else %>
+      <li class="footer_icon">
+        <%= link_to "/jobs/new/" do %>
+        <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+        <% end %>
+      </li>
+<% end %>
       <li class="footer_icon">
         <%= link_to destroy_member_session_path, method: :delete do%>
         <i class="fa fa-cog fa-3x" aria-hidden="true"></i>
