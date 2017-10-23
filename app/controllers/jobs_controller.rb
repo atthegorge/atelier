@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
 
+  before_action :move_to_index, except: :index
 
   def index
     @jobs = Job.order("created_at DESC").page(params[:page]).per(5)
@@ -39,6 +40,10 @@ class JobsController < ApplicationController
   private
   def job_params
     params.permit(:image, :title, :introduction, :description, :skill, :skill_list, :option_list)
+  end
+
+  def move_to_index
+    redirect_to action: :index unless member_signed_in?
   end
 
 end
