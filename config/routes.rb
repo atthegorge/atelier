@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   delete  'jobs/:id'  => 'jobs#destroy'
   get   'jobs/:id/edit'  => 'jobs#edit'
   patch   'jobs/:id'  => 'jobs#update'
+  get    'tags/index' =>  'tags#index'
 end

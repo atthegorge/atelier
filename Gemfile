@@ -59,3 +59,5 @@ end
 
 # タグ機能の追加
 gem 'acts-as-taggable-on', '~> 4.0'
+
+gem 'carrierwave'

@@ -1,0 +1,9 @@
+  <div class="contents row" >
+    <% @jobs.each do |job| %>
+    <a href="/jobs/<%= job.id %>/">
+      <div class="content_post" style="background-image: url(<%= job.image %>);">
+        <%= simple_format(job.title) %>
+      </div>
+    </a>
+    <% end %>
+  </div>
