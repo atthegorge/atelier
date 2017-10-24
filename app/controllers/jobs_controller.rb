@@ -7,6 +7,7 @@ class JobsController < ApplicationController
   end
 
   def new
+    @job = Job.new
   end
 
   def show
@@ -14,7 +15,8 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(image: job_params[:image], title: job_params[:title], introduction: job_params[:introduction], description: job_params[:description], skill: job_params[:skill], member_id: current_member.id)
+    binding.pry
+    Job.create(job_params)
     redirect_to controller: :jobs, action: :index
   end
 
@@ -39,7 +41,7 @@ class JobsController < ApplicationController
 
   private
   def job_params
-    params.permit(:image, :title, :introduction, :description, :skill, :skill_list, :option_list)
+    params.require(:job).permit(:image, :title, :introduction, :description, :skill_list, :option_list)
   end
 
   def move_to_index

@@ -7,11 +7,16 @@
     <p><%= @jobs.title %></p>
   </span>
   <span class="job_org_name">
-    <!--   団体名を表示したい -->
     <p><span style="color: #008080">● </span><%= link_to "#{@jobs.member.name}", "/members/#{@jobs.member.id}" %></p>
-    <!-- 団体名からページに飛ばしたい -->
   </span>
+  <span>
+    <%= @jobs.skill_list %>
+  </span><br>
+  <span>
+    <%= @jobs.option_list %>
+  </span><br>
   <br>
+
 
 
   <div class="job_introduction">
