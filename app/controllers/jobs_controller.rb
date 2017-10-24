@@ -32,7 +32,7 @@ class JobsController < ApplicationController
 
   def update
     job = Job.find(params[:id])
-    if job.user_id == current_member.id
+    if job.member_id == current_member.id
       job.update(job_params)
     end
   end

@@ -31,9 +31,9 @@
 
    <!-- グローバルナビ -->
    <footer class = "global-navi">
-   <!-- 団体の時 -->
-    <% if member_signed_in? && current_member.status = "organization" %>
-    <ul class="global_navi_icon">
+     <!-- 団体の時 -->
+     <% if member_signed_in? && current_member.status == "organization" %>
+     <ul class="global_navi_icon">
       <li class="footer_icon">
         <%= link_to members_path(current_member) do %>
         <i class="fa fa-user fa-2x" aria-hidden="true"></i>
@@ -50,8 +50,8 @@
         <% end %>
       </li>
     </ul>
-   <!-- 個人の時 -->
-    <% elsif member_signed_in? && current_member.status = "user" %>
+    <!-- 個人の時 -->
+    <% elsif member_signed_in? && current_member.status == "user" %>
     <ul class="global_navi_icon">
       <li class="footer_icon">
         <%= link_to members_path(current_member) do %>
@@ -59,7 +59,7 @@
         <% end %>
       </li>
       <li class="footer_icon">
-        <%= link_to "https://www.google.co.jp/maps" do %>
+        <%= link_to "https://www.google.co.jp/" do %>
         <i class="fa fa-search fa-2x" aria-hidden="true"></i>
         <% end %>
       </li>
@@ -69,7 +69,7 @@
         <% end %>
       </li>
     </ul>
-  <!-- ログインしてない人の時 -->
+    <!-- ログインしてない人の時 -->
     <% else %>
     <ul class="global_navi_icon">
       <li class="footer_icon_wide">
