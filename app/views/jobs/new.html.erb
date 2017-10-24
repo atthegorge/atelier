@@ -24,12 +24,17 @@
   </div>
 
   <div class="field">
-    <%= f.label :skill_list, "スキル・特技（カンマ区切り）" %><br>
-    <%= text_field_tag 'job[skill_list]', @job.skill_list.join(',') %>
+    <%= f.label :skill, "求めるスキル" %><br>
+    <%= f.text_area :skill, :rows=>"10" %>
   </div>
 
   <div class="field">
-    <%= f.label :option_list, "興味・関心（カンマ区切り）" %><br>
+    <%= f.label :genre_list, "仕事領域（専門）" %><br>
+    <%= text_field_tag 'job[genre_list]', @job.genre_list.join(',') %>
+  </div>
+
+  <div class="field">
+    <%= f.label :option_list, "業務形態（頻度・肩書き）" %><br>
     <%= text_field_tag 'job[option_list]', @job.option_list.join(',') %>
   </div>
 

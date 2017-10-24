@@ -10,7 +10,7 @@
     <p><span style="color: #008080">● </span><%= link_to "#{@jobs.member.name}", "/members/#{@jobs.member.id}" %></p>
   </span>
   <span>
-    <%= @jobs.skill_list %>
+    <%= @jobs.genre_list %>
   </span><br>
   <span>
     <%= @jobs.option_list %>
@@ -22,14 +22,14 @@
   <div class="job_introduction">
     <h3 class="index_label">● 概要</h3>
     <p class="job_content_detail">
-      <%= @jobs.introduction %>
+      <%= simple_format(@jobs.introduction) %>
     </p>
   </div>
   <br>
   <div class="job_description">
     <h3 class="index_label">● 仕事説明</h3>
     <p class="job_content_detail">
-      <%= @jobs.description %>
+      <%= simple_format(@jobs.description) %>
     </p>
   </div>
   <br>
