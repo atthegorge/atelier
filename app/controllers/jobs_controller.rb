@@ -12,6 +12,7 @@ class JobsController < ApplicationController
 
   def show
     @jobs = Job.find(params[:id])
+    # @spot = Member.find(params[:id])
   end
 
   def create

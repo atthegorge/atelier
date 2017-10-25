@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025002442) do
+ActiveRecord::Schema.define(version: 20171025093040) do
 
   create_table "job_members", force: :cascade do |t|
     t.integer  "job_id",     limit: 4
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(version: 20171025002442) do
     t.string   "name",                   limit: 255
     t.string   "status",                 limit: 255
     t.text     "image",                  limit: 65535
+    t.text     "address",                limit: 65535
+    t.text     "latitude",               limit: 65535
+    t.text     "longitude",              limit: 65535
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree

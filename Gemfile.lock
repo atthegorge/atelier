@@ -74,6 +74,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     fssm (0.2.10)
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hike (1.2.3)
@@ -204,6 +205,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass-rails (~> 2.0)
   devise
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   kaminari

@@ -23,6 +23,10 @@
     </div>
 
     <div class="field">
+    <%= f.text_field :address, :placeholder => "address(法人・団体のみ)" %>
+    </div>
+
+    <div class="field">
       <% if @validatable %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
@@ -36,9 +40,9 @@
     <div class="actions">
       <%= f.submit "Sign up" %>
     </div>
-        <div class="action_signup" style="color: #fff;">
+    <div class="action_signup" style="color: #fff;">
      <%= link_to "or Sign in", "/members/sign_in/" %>
    </div>
-    <% end %>
-  </div>
+   <% end %>
+ </div>
 
