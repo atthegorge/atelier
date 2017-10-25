@@ -5,7 +5,7 @@ class TagsController < ApplicationController
   end
 
   def show
-    @jobs = Job.tagged_with(params[:id]).page(params[:page]).newest
+    @jobs = Job.tagged_with(params[:id]).page(params[:page])
   end
 
 end

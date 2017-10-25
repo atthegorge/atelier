@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get   'jobs/:id/edit'  => 'jobs#edit'
   patch   'jobs/:id'  => 'jobs#update'
   get    'tags/index' =>  'tags#index'
+  get    'tags/:id', to:  'tags#show', as: 'tags'
+  post    'job_members' =>  'job_members#create'
 end

@@ -44,7 +44,10 @@
   <!-- user向け -->
   <% if member_signed_in? && current_member.status == "user" %>
   <div class="main_button">
-    <p class="main_button_entry">ENTRY</p>
+    <%= form_tag(job_members_path, method: :post) do %>
+    <%= hidden_field_tag :job_id, @jobs.id %>
+    <%= submit_tag 'ENTRY', class: "main_button_entry" %>
+    <% end %>
   </div>
 
   <% elsif member_signed_in? && current_member.id == @jobs.member_id %>
