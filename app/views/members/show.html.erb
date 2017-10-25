@@ -13,10 +13,11 @@
       <span class="member_status" ><%= @members.status %></span>
     </div>
 
-    <div id="google_map"></div>
-    <script>
-    var map;
-    function initMap() {
+    <% if @members.status == "organization" %>
+    <div id="google_map">
+      <script>
+        var map;
+        function initMap() {
     map = new google.maps.Map(document.getElementById('google_map'), { // #googlemapに地図を埋め込む
         center: { // 地図の中心を指定
             lat: <%= @members.latitude %>, // 緯度
@@ -26,8 +27,11 @@
       });
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByB93E3h6LeuNeoMOGYuToE1fnKMEvKfE&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByB93E3h6LeuNeoMOGYuToE1fnKMEvKfE&callback=initMap">
+</script>
 
+</div>
+<% end %>
 <br>
 <!-- userは「応募一覧」、orgは「募集一覧」及び「候補者一覧」をJSでタブ表示 -->
 <div class="index">
@@ -39,14 +43,24 @@
 </div>
 </div>
 
+<% if @members.status == "organization" %>
 <div class="content_list">
-  <% @jobs.each do |job| %>
+  <% @jobs_org.each do |job| %>
   <div class="content_post" style="background-image: url(<%= job.image %>);">
     <%= simple_format(job.title) %>
   </div>
   <% end %>
-  <%= paginate(@jobs) %>
+  <%= paginate(@jobs_org) %>
+
+  <% elsif @members.status == "user" %>
+  <% @jobs_user.each do |job| %>
+  <div class="content_post" style="background-image: url(<%= job.image %>);">
+    <%= simple_format(job.title) %>
+  </div>
+  <% end %>
+  <%= paginate(@jobs_user) %>
 </div>
+<% end %>
 
 <div class="main_button">
   <%= link_to destroy_member_session_path, method: :delete do %>
