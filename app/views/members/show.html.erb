@@ -15,6 +15,7 @@
 
     <% if @members.status == "organization" %>
     <div id="google_map">
+
       <script>
         var map;
         function initMap() {
@@ -46,17 +47,21 @@
 <% if @members.status == "organization" %>
 <div class="content_list">
   <% @jobs_org.each do |job| %>
+  <a href="/jobs/<%= job.id %>/">
   <div class="content_post" style="background-image: url(<%= job.image %>);">
     <%= simple_format(job.title) %>
   </div>
+  </a>
   <% end %>
   <%= paginate(@jobs_org) %>
 
   <% elsif @members.status == "user" %>
   <% @jobs_user.each do |job| %>
+  <a href="/jobs/<%= job.id %>/">
   <div class="content_post" style="background-image: url(<%= job.image %>);">
     <%= simple_format(job.title) %>
   </div>
+  </a>
   <% end %>
   <%= paginate(@jobs_user) %>
 </div>

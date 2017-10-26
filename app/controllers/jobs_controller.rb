@@ -11,6 +11,7 @@ class JobsController < ApplicationController
   end
 
   def show
+    # binding.pry
     @jobs = Job.find(params[:id])
     # @spot = Member.find(params[:id])
   end
@@ -18,7 +19,7 @@ class JobsController < ApplicationController
   def create
     Job.create(job_params)
     redirect_to controller: :jobs, action: :index
-    binding.pry
+    # binding.pry
     # user_id: current_user.idを消したために投稿ユーザのidが保存されなくなった!!!
   end
 
@@ -31,7 +32,7 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job = Job.find(params[:id])
+    @jobs = Job.find(params[:id])
   end
 
   def update

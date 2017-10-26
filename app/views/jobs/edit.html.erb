@@ -1,15 +1,48 @@
 <div class="contents row">
-    <%= form_tag("/jobs/#{@job.id}", method: :patch ) do %>
-    <h3>
-      募集を編集する
-    </h3>
-    <input placeholder="Image Url" type="text" name="image" value="<%= @job.image %>" autofocus="true">
-    <input placeholder="Title" type="string" name="title" value="<%= @job.title %>" autofocus="true">
-    <input placeholder="Introduction" type="text" name="introduction" value="<%= @job.introduction %>" autofocus="true">
-    <input placeholder="Description" type="text" name="description" value="<%= @job.description %>" autofocus="true">
-    <input placeholder="Skill" type="text" name="skill" value="<%= @job.skill %>" autofocus="true">
-    <input placeholder="仕事領域（専門）" type="text" name="genre_list" value="<%= @job.genre_list %>" autofocus="true">
-    <input placeholder="業務形態（頻度・肩書き）" type="text" name="option_list" value="<%= @job.option_list %>" autofocus="true">
-    <input type="submit" value="UPDATE">
-    <% end %>
+<%= form_for(@jobs) do |f| %>
+  <h3>
+    募集を編集する
+  </h3>
+
+  <!-- 新規 -->
+  <div class="field">
+    <%= f.label :image, "募集画像" %><br>
+    <%= f.file_field :image, :value => @jobs.image  %> <!-- carrierwaveで画像をアップロード -->
   </div>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br>
+    <%= f.text_field :title, :value => @jobs.title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :introduction, "活動概要" %><br>
+    <%= f.text_area :introduction, :rows=>"10", :value => @jobs.introduction %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "募集要項" %><br>
+    <%= f.text_area :description, :rows=>"10", :value => @jobs.description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :skill, "求めるスキル" %><br>
+    <%= f.text_area :skill, :rows=>"10", :value => @jobs.skill %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genre_list, "仕事領域（専門）" %><br>
+    <%= text_field_tag 'job[genre_list]', @jobs.genre_list.join(','), :value => @jobs.genre_list %>
+  </div>
+
+  <div class="field">
+    <%= f.label :option_list, "業務形態（頻度・肩書き）" %><br>
+    <%= text_field_tag 'job[option_list]', @jobs.option_list.join(','), :value => @jobs.option_list %>
+  </div>
+
+  <%= f.submit "UPDATE" %>
+  <% end %>
+</div>
+
+
+
