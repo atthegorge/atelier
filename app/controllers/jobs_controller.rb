@@ -18,7 +18,8 @@ class JobsController < ApplicationController
   def create
     Job.create(job_params)
     redirect_to controller: :jobs, action: :index
-    # user_id: current_user.idを消したために投稿ユーザのidが保存されなくなった
+    binding.pry
+    # user_id: current_user.idを消したために投稿ユーザのidが保存されなくなった!!!
   end
 
   def destroy
@@ -42,7 +43,7 @@ class JobsController < ApplicationController
 
   private
   def job_params
-    params.require(:job).permit(:image, :title, :introduction, :description, :skill, :genre_list, :option_list)
+    params.require(:job).permit(:image, :title, :introduction, :description, :skill, :genre_list, :option_list).merge(member_id: current_member.id)
   end
 
   def move_to_index
