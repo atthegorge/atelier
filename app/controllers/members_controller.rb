@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  # before_action :move_to_index, except: :index
 
   def show
     # orgは自分の募集のみ取得して表示
@@ -12,7 +12,7 @@ class MembersController < ApplicationController
 
   end
 
-  def move_to_index
-    redirect_to action: :index unless member_signed_in?
-  end
+  # def move_to_index
+  #   redirect_to action: :index unless member_signed_in?
+  # end
 end
